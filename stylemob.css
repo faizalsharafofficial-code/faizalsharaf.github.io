@@ -1,0 +1,152 @@
+@media(max-width:930px) {
+
+    .container .pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    nav .togglebtn {
+        display: initial;
+    }
+
+    .click {
+        top: 45px;
+    }
+
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    nav .navlinks {
+        position: absolute;
+        top: 44px;
+        right: -100%;
+        bottom: 0;
+        width: 40%;
+        height: 25vh;
+        background-color: transparent;
+        z-index: 3;
+        transition: 0.5s;
+        padding: 25px 0;
+
+    }
+
+    nav .navlinks a {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    nav .navlinks.open {
+        right: 0;
+    }
+
+    .about .pic2 {
+        width: 250px;
+        height: 250px;
+        margin-left: 0px;
+    }
+
+    .about-text h2 {
+        margin: 0px 0px 0px 0px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .container,
+    .about,
+    .cont {
+        flex-direction: column;
+        padding-top: 25px;
+    }
+    .progress-bars{
+        display: center;
+       max-width: 768px; 
+      }
+      .cont {
+        max-width: 100%; /* Set max-width to 100% to adapt to mobile view */
+        margin: 0; /* Remove margin for better spacing */
+      }
+      
+      
+      .skill-bar .skill-per {
+        position: relative;
+        
+      }
+
+    .pic-text,
+    .about-text {
+        padding: 40px 0px;
+        text-align: center;
+    }
+
+    .pic-text h1,
+    .about-text h2,
+    .about-text h2 span {
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+    .pic-text h3,
+    .about-text h4 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .about-text p {
+        font-size: 12px;
+        font-weight: 500;
+        text-align: inherit ;
+
+    }
+
+    .btn {
+        padding: 10px 10px;
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically in mobile view */
+        align-items: center; /* Center-align the items horizontally */
+    }
+
+    .contact-form form {
+        width: 100%; /* Make the form full width in mobile view */
+    }
+    
+    .contact-form form .send {
+        padding: 12px 30px; /* Reduced padding for a smaller button */
+        font-size: 16px; /* Reduced font size for a smaller button */
+    }
+
+    .contact-form form {
+        margin-top: 1rem; /* Add margin to separate the form from the icons */
+    }
+    .contact {
+        display: block; /* Change to block layout for mobile view */
+        padding-left: 25; /* Remove left padding for mobile view */
+        margin-top: 30px; /* Adjust margin for spacing */
+    }
+
+    .contact-form {
+        margin-top: 1rem; /* Add margin to separate the form from the icons */
+    }
+
+}

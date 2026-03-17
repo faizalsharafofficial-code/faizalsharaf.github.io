@@ -1,0 +1,852 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: poppins, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    background: url(Bg2.jpg);
+    color: aliceblue;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: transparent;
+    border-radius: 50%;
+    color: #0ef;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+
+    cursor: pointer;
+    text-align: center;
+}
+.logo i span{
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+
+nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 25%;
+    right: 25px;
+    z-index: 3;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span {
+    display: block;
+    background-color: #0ef;
+    margin: 5px 0px;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+nav .navlinks {
+    list-style-type: none;
+
+}
+
+nav .navlinks a {
+    display: inline-block;
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    opacity: 0;
+    transition: .3s;
+    animation: slideBottom .5s ease forwards;
+    animation-delay: calc(.2s * var(--i))
+}
+
+nav .navlinks a:hover {
+    color: #0ef;
+}
+
+nav .navlinks li a {
+    color: aliceblue;
+    margin-right: 2.5rem;
+
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.container .pic {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-right: 50px;
+    overflow: hidden;
+    border: 10px solid #0ef;
+    box-shadow: 5px 7px 25px cyan(0, 0, 0, 0.5);
+}
+
+.pic img {
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+
+.pic-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}
+
+.pic-text p {
+    font-weight: lighter;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.pic-text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.pic-text h3 {
+    font-size: 35px;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.pic-text h3 span {
+    color: #0ef;
+}
+
+.social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    transition: 1s ease;
+    animation: slideLeft .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social a:hover {
+    background-color: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn {
+    display: inline-flex;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    transition: .2s ease;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.btn:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+/*-----FOR ABOUT-------*/
+
+.about {
+    display: inline;
+    align-items: center;
+    gap: 1.5
+}
+
+.about-text h2 {
+    font-size: 60px;
+}
+
+.about-text h2 span {
+    color: #0ef;
+}
+
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about .pic2 {
+    display: right;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #0ef;
+    box-shadow: 5px 7px 25px cyan(0, 0, 0, 0.5);
+    margin-left: 100px;
+}
+
+
+
+.about {
+    display: flex;
+    align-items: center;
+    max-width: 1300px
+}
+
+.pic2 {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #0ef;
+    box-shadow: 5px 7px 25px cyan(0, 0, 0, 0.5); 
+    
+}
+
+.pic2 img {
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.about-text {
+    flex: 3;
+    text-align: left;
+    color: aliceblue;
+    margin: 50px ;
+}
+
+.about-text h2 {
+    font-size: 50px;
+    margin: 25px 0px 25px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+    
+}
+.about-text h2 span{
+    font-size: 55px; 
+    
+}
+
+.about-text h4 {
+    font-size: 40px; 
+    font-weight: 600;
+    margin: 25px 0px 25px 0;
+}
+
+.about-text p {
+    font-size: 20px; 
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.skills-text{
+    text-align: center;
+}
+.skills-text h1{
+ font-size: 45px;
+}
+.skills-text h1 span{
+    color: #0ef;
+    font-size: 55px;
+}
+.technical-skills{
+    text-decoration: underline;
+    text-align: center;
+    font-weight: 700;
+    font-size: large;
+    margin-bottom: 30px;
+}
+
+
+.python-icon {
+    color: #073cf9; /* Change color for Python icon */
+}
+
+.js-icon {
+    color: #F7DF1E; /* Change color for JavaScript icon */
+}
+
+.sql-icon {
+    color: #007BFF; /* Change color for SQL icon */
+}
+
+.ml-icon {
+    color: #6B42B9; /* Change color for Machine Learning icon */
+}
+
+.tableau-icon {
+    color: #0ddd2f; /* Change color for Tableau icon */
+}
+
+.html-icon {
+    color: #F06529; /* Change color for HTML icon */
+}
+
+.css-icon {
+    color: #2965F1; /* Change color for CSS icon */
+}
+
+
+.skills {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.skills-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.cont{
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background: transparent;
+    margin: 0 15px;
+    border-radius: 7px;
+    display: inline-block;
+
+}
+.cont .skill-box{
+ width: 100%;
+ margin:  25px 0;
+
+}
+.skill-box .title{
+    display: center;
+    font-size: 24px;
+    font-weight: 600;
+    align-items: center;
+}
+.skill-box .skill-bar{
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    background: #051129;
+    margin-top: 6px;
+}
+.skill-bar .skill-per{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+    background: #0ef;
+    animation: progress 3.2s ease-in-out forwards;
+    opacity: 0;
+}
+.skill-per.python{
+    width: 90%;
+}.skill-per.html{
+    width: 65%;
+}.skill-per.css{
+    width: 65%;
+}.skill-per.js{
+    width: 60%;
+}.skill-per.sql{
+    width: 75%;}
+.skill-per.ml{
+    width: 80%;
+}.skill-per.tab{
+    width: 75%;
+}
+.skill-per .tooltip{
+    position:absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #0ef;
+}
+.tooltip::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background-color: #0ef;
+    transform: translateX(-50%) rotate(45deg);
+}
+/* Common styles for circular progress bars */
+.professional-skills {
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.progress-bars {
+    display: center;
+    justify-content: space-between; /* Adjust as needed */
+}
+
+.cont {
+    flex: 1;
+    text-align: center;
+    margin: 20px;
+}
+
+.circular {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#0ef 3.6deg, #ffffff 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular::before {
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 90%;
+    background-color: #051129;
+}
+
+.progress-value, .textp {
+    position: relative;
+    font-size: 30px;
+    font-weight: 500;
+    color: #0ef;
+    text-decoration: none !important; 
+}
+.main-text{
+    padding-top: 130px;
+    margin-top: 200px;
+}
+.main-text h2{
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+}
+.main-text h2 span{
+    color: #0ef;
+}
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(359px,auto));
+}
+.row{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.row img{
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1),#0ef);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+.layer h5{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.layer p{
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.layer i{
+    color: #F06529;
+    margin-top: 20px;
+    font-size: 20px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.row:hover img{
+    transform: scale(1.1);
+}
+.row:hover .layer{
+    height: 100%;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left: 20px;
+    margin-top: 130px;
+}  
+.contact-text h2{
+    font-size: 90px;
+    line-height: 1;
+    text-align: center;
+}
+.contact-text h2 span{
+    color: #0ef;
+}
+.contact-text h4{
+    margin: 15px 0;
+    font-size: 20px;
+    color: rgb(228,228,228);
+    font-weight: 600;
+}
+.contact-text p{
+    color: rgb(177,177,177);
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+.contact-list{
+    margin-bottom: 3rem;
+}
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+.contact-list i{
+    display: inline-block;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+}
+.contact-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: #0ef;
+}
+.contact-icons i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    transition: 1s ease;
+    animation: slideLeft .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.contact-icons i:hover{
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+.contact-form form{
+    position: relative;
+    width: fit-content;
+}
+.contact-form form input,form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: #555557;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+.contact-form textarea {
+    resize: none;
+    height: 150px; /* Reduced height for smaller screens */
+}
+/* Common styles for form elements */
+.contact-form form .send {
+    display: block;
+    padding: 12px 30px; /* Reduced padding for a smaller button */
+    background: #0ef;
+    border-radius: 30px; /* Reduced border-radius for a rounder button */
+    font-size: 16px; /* Reduced font size for a smaller button */
+    color: #081b29;
+    letter-spacing: 1px;
+    width: 50%;
+    
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.contact-form form .send:hover {
+    background-color: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.last-text p{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(7,85,91);
+    font-weight: 300;
+    margin-top: 70px;
+}
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2,1rem;
+}
+.top i{
+    color: #000;
+    background: #0ef;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+
+@keyframes progress{
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+/* --- Professional AV Brand Grid --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 238, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    
+    /* Using your existing animation */
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    transition: all 0.4s ease;
+}
+
+.img-box {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.img-box img {
+    max-width: 80%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(1) brightness(2); /* Makes logos silver/white to match theme */
+    transition: 0.5s ease;
+}
+
+/* --- Circular Software Skills --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.skill-card {
+    width: 200px;         /* Equal width and height for a perfect circle */
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;        /* Internal "Safe Zone" */
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(0, 238, 255, 0.1);
+    transition: 0.5s ease;
+}
+
+.img-box {
+    width: 120px;         /* Defines the maximum area the logo can occupy */
+    height: 80px;         /* Defines height; wider for AV brand text logos */
+    display: flex;
+    align-items: center;  /* Centers logo vertically */
+    justify-content: center; /* Centers logo horizontally */
+    margin-bottom: 10px;
+}
+
+.img-box img {
+    max-width: 100%;      /* Logo will never exceed the 120px width */
+    max-height: 100%;     /* Logo will never exceed the 80px height */
+     /* Keeps original proportions without stretching */
+    
+    /* Your existing theme styling */
+    filter: grayscale(1) brightness(2);
+    transition: 0.5s ease;
+}
+
+/* On hover, make the logo pop */
+.skill-card:hover img {
+    filter: grayscale(0) brightness(1);
+    transform: scale(1.1);
+}
